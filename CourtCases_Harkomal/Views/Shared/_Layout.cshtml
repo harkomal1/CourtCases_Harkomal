@@ -42,14 +42,12 @@
                         </div>
                         <div class="col-md-10 text-right menu-1">
                             <ul>
-                                @if (User.IsInRole("Admin"))
-                                {
-                                    @Html.Partial("_Admin")
-                                }
-                                @if (User.IsInRole("Manager"))
-                                {
-                                    @Html.Partial("_Manager")
-                                }
+                                <li>@Html.ActionLink("Judges", "Index", "JudgeMasters")</li>
+                                <li>@Html.ActionLink("Lawyers", "Index", "LawyerMasters")</li>
+                                <li>@Html.ActionLink("Court Rooms", "Index", "CourtRooms")</li>
+                                <li>@Html.ActionLink("Applicants", "Index", "Parties")</li>
+                                <li>@Html.ActionLink("Case File", "Index", "CaseMasters")</li>
+                                <li>@Html.ActionLink("Hearing", "Index", "HearingMasters")</li>
                             </ul>
                             @Html.Partial("_LoginPartial")
                         </div>
